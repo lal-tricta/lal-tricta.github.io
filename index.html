@@ -12,10 +12,13 @@
       );
       if (registration.installing) {
         console.log('Service worker installing');
+         document.getElementById("print_area").innerHTML = 'Service worker installing';
       } else if (registration.waiting) {
         console.log('Service worker installed');
+         document.getElementById("print_area").innerHTML = 'Service worker installed';
       } else if (registration.active) {
         console.log('Service worker active');
+         document.getElementById("print_area").innerHTML = 'Service worker active <button onclick="window.print()">Print this page</button>';
       }
     } catch (error) {
       console.error(`Registration failed with ${error}`);
@@ -26,4 +29,4 @@
   </script>
 </head>
 <h1>Knit & Note</h1>
-<p id="print_area">This text will replace by a print button, If Service navigator installed.</p>
+<p id="print_area">This text will replace Service Worker status.</p>
