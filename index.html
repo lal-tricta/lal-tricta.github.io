@@ -1,4 +1,10 @@
 <head>
   <title>Knit & Note</title>
+  <script type="text/javascript">
+    if (navigator && navigator.serviceWorker) {
+      console.log('has Service Worker');
+     navigator.serviceWorker.register('sw.js');
+      }
+  </script>
 </head>
 <h1>Knit & Note</h1>
