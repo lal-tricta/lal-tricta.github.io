@@ -11,7 +11,7 @@ self.addEventListener('install', function (event) {
 		}
 		return cache;
 	}));
-     document.getElementById("print_area").innerHTML = '<button onclick="window.print()">Print this page</button>';
+    
 });
 
 // Listen for request events
